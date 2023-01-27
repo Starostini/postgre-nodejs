@@ -1,11 +1,13 @@
+const express = require('express');
 
-import './index.html';
-import './index.scss';
-import imageexample from './img/INSTALL_EXTENSION_STEP_2_IMAGE.png'
-import { mathem, sum } from './modules/calc';
+const PORT = process.env.PORT || 8080
+const app = express()
 
-const img = new Image();
-img.src = imageexample;
-console.log(mathem(2, 4));
+app.get('/', (req, res) => {
+    res.send('HELLO NODEMON+ POSTGRES + NODE JS')
+})
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
 
-console.log(sum(6, 2));
+document.querySelector('test').addEventListener('click', () => {
+
+})
